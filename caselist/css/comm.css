@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {margin:0; padding:0;}
+html{-webkit-text-size-adjust:none;}
+body{font:12px/24px "Microsoft YaHei",tahoma,HELVETICA; text-align:center;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+img{border:none; vertical-align:top}
+i,em{font-style:normal;}
+input,select,option,textarea{font-size:12px;}
+a{text-decoration:none;} a:hover{text-decoration:underline;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5{font-weight:normal;}
+
+/* function */
+noscript,.spanclass,.pannel,.hidden{display:none;}
+.show,.block{display:block;}
+.fl{float:left;} ..fr{float:right;}
+.fs-14{font-size:14px;} .fs-16{font-size:16px;}
+.clear{clear:both; height:0; line-height:0; font-size:0; overflow:hidden;}
+.clearfix{*zoom:1} .clearfix:after{content:"\20"; clear:both; height:0; display:block; overflow:hidden;}
+.cf{*zoom:1} .cf:after{content:"\20"; clear:both; height:0; display:block; overflow:hidden;}
+.por{position:relative;}
+.poa{position:absolute;}
+.fwn{font-weight:normal;}
+.fwb{font-weight:bold;}
+.white{color:#fff;}
+.black{color:#000;}
+.yh{font-family:"Microsoft YaHei";}
+.oh{overflow:hidden;}
+.tal{text-align:left;}
+.tar{text-align:right;}
+.tac{text-align:center;}
+
+/* 侧栏导航 S*/
+.side-nav{width: 205px;background:#080910;height: 100%;position:fixed;z-index:900;padding:35px 0 0;}
+.side-nav .icon-logo{width: 141px;margin:0 auto;}
+.side-nav .nav-wrap{margin:35px 0 0;}
+.side-nav .nav-wrap li{height: 51px;font-size: 18px;text-align:center;line-height: 50px;}
+.side-nav .nav-wrap li a{color:#fff;display:block;height:50px;cursor:pointer;-webkit-transition:all 0.5s ease;transition:all 0.5s ease;}
+.side-nav .nav-wrap li a:hover{text-decoration:none;}
+.side-nav .nav-wrap li span{width:122px;text-indent:6px;border-bottom:1px solid #1a2331;display: inline-block;*display: inline;*zoom: 1;}
+.side-nav .nav-wrap li:nth-child(1) a:hover{background:#f47915;}
+.side-nav .nav-wrap .current:nth-child(1) a{background:#f47915;}
+.side-nav .nav-wrap li:nth-child(2) a:hover{background:#73a80c;}
+.side-nav .nav-wrap .current:nth-child(2) a{background:#73a80c;}
+.side-nav .nav-wrap li:nth-child(3) a:hover{background:#0b83e5;}
+.side-nav .nav-wrap .current:nth-child(3) a{background:#0b83e5;}
+.side-nav .nav-wrap li:nth-child(4) a:hover{background:#ee4c7e;}
+.side-nav .nav-wrap .current:nth-child(4) a{background:#ee4c7e;}
+.side-nav .nav-wrap li:nth-child(5) a:hover{background:#753cd4;}
+.side-nav .nav-wrap .current:nth-child(5) a{background:#753cd4;}
+.side-nav .nav-wrap li:nth-child(6) a:hover{background:#ba2cae;}
+.side-nav .nav-wrap .current:nth-child(6) a{background:#ba2cae;}
+.side-nav .form-search{width: 152px;margin:28px auto 0;height: 26px;background:#1a2331;-webkit-border-radius:13px;border-radius:13px;position:relative;}
+.side-nav .icon-search{margin:5px 0 0 9px;width: 17px;height: 17px;background:url(../imgs/icon-search-list.png) no-repeat center top;float:left;}
+.side-nav .is-focus{border:1px solid #6b8bbb;width: 150px;height: 24px;}
+.side-nav .is-focus .icon-search{background-image: url(../imgs/icon-search-list-focus.png);margin:4px 0 0 8px;}
+.side-nav .search-box{border:none;font-size: 14px;color:#fff;width: 100px;height: 26px;line-height:26px;margin-left: 5px;background:none;}
+.side-nav .search-box:focus{outline: none;}
+.side-nav .form-search .icon-arrow-b{background:url(../imgs/icon-arrow-b-2.png) no-repeat left center;width: 19px;height: 26px;cursor:pointer;position:absolute;z-index:10;right: 0;top: 0;}
+.side-nav .is-focus .icon-arrow-b{right: -1px;top: -1px;}
+.side-nav .sort-selected{display:none;}
+.side-nav .sort-list{padding:10px 0 0;position:absolute;z-index:10;right: -5px;top:26px;width: 80px; height: 0; overflow:hidden;}
+.side-nav .sort-list-hover{height: auto;}
+.side-nav .sort-list .icon-arrow-t{display:none;width: 14px;height: 9px;right: 15px;top: 3px;position:absolute;z-index:10;background:url(../imgs/icon-arrow-t-2.png) no-repeat center top;}
+.side-nav .sort-list-hover .icon-arrow-t{display:block;}
+.side-nav .sort-list ul{padding:10px 0 12px;background:#1a2331;border:1px solid #444952;}
+.side-nav .sort-list li{height: 24px;line-height: 24px;margin-bottom: 5px;font-size: 15px;color:#fff;cursor:pointer;text-align:center;}
+.side-nav .sort-list li:last-child{margin-bottom: 0;}
+.side-nav .sort-list li:hover{background:#4a70ff;color:#fff;}
+.side-nav .sort-list .current{background:#4a70ff;color:#fff;}
+/* 侧栏导航 E*/
+
+
+
+
