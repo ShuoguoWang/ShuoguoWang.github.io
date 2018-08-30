@@ -1,0 +1,127 @@
+*{
+	margin:0;
+	padding:0;
+}
+.container{
+	max-width: 800px;
+	width: 60%;
+	margin:100px auto 0;
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.container .caption{
+	position: absolute;
+	padding: 5%;
+	width: 90%;
+	height: 83%;
+	z-index: 1;
+}
+.container img{
+	width: 100%;
+	height: 100%;
+}
+.container .caption .title{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	opacity: 0.85;
+	text-align: center;
+	color: #ffffb;
+
+	//居中属性
+	display: -webkit-box;
+	webkit-box-pack:center;
+	-webkir-box-align:center;
+	display: -webkit-flex;
+
+	display: -moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	display: -ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+	display: flex;
+	opacity: 1;
+	text-shadow:1px 1px 2px rgba(0,0,0,.26);
+	-webkit-box-shadow:0 0 30px 20px rgba(0,0,0,.46);
+	-moz-box-shadow:0 0 30px 20px rgba(0,0,0,.46);
+	box-shadow:0 0 30px 20px rgba(0,0,0,.46);
+	transform:opacity .5s;
+	-webkit-transform:opacity .5s;
+	-o-transform:opacity .5s;
+	-moz-transform:opacity .5s;
+}
+
+.container:hover .title{
+	opacity:1;
+}
+// .container .caption .title::before{
+// 	content:'';
+// 	position:absolute;
+// 	left:0;
+// 	top:50%;
+// 	width:99.2%;
+// 	height:0;
+// 	overflow:hidden;
+// 	border:3px solid #fffffb;
+// 	border-width:0 3px;
+// 	visibility:hidden;
+// 	-webkit-transition:all .5s;
+// 	-o-transition:all .5s;
+// 	-moz-transition:all .5s;
+// 	transition:all .5s
+// }
+// .container .caption .title::after{
+// 	content:'';
+// 	position:absolute;
+// 	left:50%;
+// 	top:0;
+// 	width:0;
+// 	height:99.2%;
+// 	overflow:hidden;
+// 	border:3px solid #fffffb;
+// 	border-width:3px 0;
+// 	visibility:hidden;
+// 	-webkit-transition:all .5s;
+// 	-o-transition:all .5s;
+// 	-moz-transition:all .5s;
+// 	transition:all .5s
+// }
+.container .caption .title h1{
+	width: 100%;
+	line-height: 400px;
+	font-size: 48px;
+	text-align: center;
+	background-image: -webkit-linear-gradient(left, #f00, #ec73ab 25%, yellow 50%, #ec73ab 75%, #f00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveBg 4s infinite linear;
+    background-size: 200% 100%;
+    opacity: 1;
+    transition: all 0.5;
+}
+// .container img{
+// 	-webkit-filter:blur(2px);
+// 	filter:blur(2px)
+// }
+// .container:hover .title::before{
+// 	height:100%;
+// 	visibility:visible;
+// 	top:0;
+// 	bottom: 0;
+// }
+// .container:hover .title::after{
+// 	width:100%;
+// 	visibility:visible;
+// 	left:0;
+// 	right: 0;
+// }
+@keyframes moveBg
+{
+	from {background-position: 0 0;}
+	to {background-position: -100% 0;}
+}
