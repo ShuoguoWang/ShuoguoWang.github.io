@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟时钟</title>
+	<style>
+		.clock{
+			width: 800px;
+			height: 800px;
+			border:1px solid #000;
+			position: absolute;
+			top:0;
+			left:0;
+			bottom: 0;
+			right: 0;
+			margin:auto;
+		}
+		.timg{
+			width: 500px;
+			height: 500px;
+			background: url(images/timg.jpg) no-repeat;
+			margin:150px;
+			position: relative;
+		}
+		.timg .hour{
+			width: 6px;
+			height: 300px;
+			background: url(images/icon.png) no-repeat 0 -51px;
+			position: absolute;
+			top:106px;
+			left:247px;
+		}
+		.timg .min{
+			width: 4px; 
+			height: 350px;
+			background: url(images/icon.png) no-repeat -16px -23px;
+			position: absolute;
+			top:80px;
+			left:248px;
+		}
+		.timg .second{
+			width: 6px; 
+			height: 400px;
+			background: url(images/icon.png) no-repeat -30px 0;
+			position: absolute;
+			top:53px;
+			left:249px;
+		}
+
+		.tim{
+			position: absolute;
+			top:540px;
+			left: 150px;
+		}
+
+	</style>
+</head>
+<body>
+    <div class="clock">
+    	<div class="timg">
+    		<div id="h" class="hour"></div>
+    		<div id="m" class="min"></div>
+    		<div id="s" class="second"></div>
+
+
+    		<div class="tim">
+    		    
+    			<input type="time" value="16:12:30" id="time">
+    			<input type="button" value="设定闹钟" id="btn" onclick="setInterval(send,1000)">
+    			<!-- <input type="button" value="设定闹钟" id="btn"> -->
+    		</div>
+
+    		<!-- <input type="date" value="2015-09-25" />
+    		<input type="time" value="13:59:28" />
+    		<input type="time" value="13:59" />
+    		<input type="datetime-local" value="2015-09-24T13:59:59"/>
+    		<input type="month" value="2015-09"/>
+    		<input type="week" value="2015-W02"/>
+    		<input type="date" value="2015-09-24" min="2015-09-16" max="2015-09-26"/> -->
+    		<!-- <input type="color" />
+    		<input type="email" />
+    		<input type="number" />
+    		<input type="range" />
+    		<input type="tel" />
+    		<input type="search" />
+    		<input type="url" /> 
+    		<input type="file" />-->
+    	</div>
+    </div>
+
+    <script>
+    	var second =document.getElementById('s');
+    	var min = document.getElementById('m');
+    	var hour = document.getElementById('h');
+    	setInterval(tick,1000);
+        var secs,mins,hours,mytime,time;
+    	function tick(){
+    		secs = gw_now_addzero(new Date().getSeconds());
+    		var sdegree = secs * 6;
+    		var srotate = 'rotate(' + sdegree + 'deg)';
+    		second.style.transform = srotate;
+
+    		mins = gw_now_addzero(new Date().getMinutes());
+    		var mdegree = mins*6+ (secs / 10);
+    		var mrotate = 'rotate(' + mdegree + 'deg)';
+    		min.style.transform = mrotate;
+
+    		hours = gw_now_addzero(new Date().getHours());
+    		var hdegree = hours * 30 + (mins / 2);
+    		var hrotate = 'rotate(' + hdegree + 'deg)';
+    		hour.style.transform = hrotate;
+
+    		mytime=hours + ':' + mins + ':' + secs; 
+    		time = document.getElementById('time').value; 		
+    	}
+    	// document.getElementById('btn').addEventListener('click',function(){
+    	// 	setInterval(send,1000);
+    	// });
+    	function send(){
+    		// console.log(mytime);
+    		// console.log(time);
+    		if(mytime === time){
+    			alert('开始工作了');
+    		}
+    	}
+    	function gw_now_addzero(temp){  
+    		if(temp<10) return '0' + temp;
+    		else return temp;
+    	}
+
+
+    	// console.log(new Date().getYear());
+    	// console.log(new Date().getFullYear());
+    	// console.log(new Date().getMonth());
+
+
+
+    </script>
+</body>
+</html>
