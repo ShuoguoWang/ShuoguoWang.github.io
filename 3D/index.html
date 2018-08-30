@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 3D轮播</title>
+	<style>
+		#container{
+			width: 500px;
+			height: 400px;
+			position: absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+			box-shadow: 2px 0px 8px 6px rgba(250,0,0,.5);
+			perspective: 500px;
+			-webkit-perspective:500px;
+		}
+		#state{
+			width:128px;
+			height: 76px;
+			transform-style: preserve-3d;
+			position: absolute;
+			top:0;
+			left:0;
+			bottom: 0;
+			right:0;
+			margin:auto;
+			-webkit-transition: -webkit-transform 1s;
+			-moz-transition: -moz-transform 1s;
+			transition: transform 1s;
+
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+		}
+		img{
+			display: block;
+			position: absolute;
+			cursor: pointer;
+			box-shadow: 0 1px 3px rgba(0,0,0,.5);
+
+		}
+		ul,li{
+			list-style: none;
+		}
+		/*img:nth-child(1){transform:rotateY(0deg) translateZ(130px);}
+		img:nth-child(2){transform:rotateY(60deg) translateZ(130px);}
+		img:nth-child(3){transform:rotateY(120deg) translateZ(130px);}
+		img:nth-child(4){transform:rotateY(180deg) translateZ(130px);}
+		img:nth-child(5){transform:rotateY(240deg) translateZ(130px);}
+		img:nth-child(6){transform:rotateY(300deg) translateZ(130px);}*/
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="state">
+
+			<img src="images/car1.jpg" width="128" height="76" id="0">
+
+			<img src="images/car2.jpg" width="128" height="76" id="1">
+
+			<img src="images/car3.jpg" width="128" height="76" id="2">
+
+			<img src="images/car4.jpg" width="128" height="76" id="3">
+
+			<img src="images/car5.jpg" width="128" height="76" id="4">
+
+			<img src="images/car6.jpg" width="128" height="76" id="5">
+		</div>
+	</div>
+	<script> 
+		window.onload = function(){
+			var img = document.getElementsByTagName('img');
+
+			for(var i = 0;i<img.length;i++){
+				var rotate = 0+i*(360/img.length);
+				var translate = 64/Math.tan(30/180*Math.PI)+20;
+				document.getElementById(i).style.transform = "rotateY("+rotate+"deg) translateZ("+translate+"px)";
+				img[i].onclick = function(){
+					var rotate1 = 0-this.id*(360/img.length);
+					document.getElementById('state').style.transform = "rotateY("+rotate1+"deg)";
+				}
+			}
+		}
+		
+	</script>
+</body>
+</html>
