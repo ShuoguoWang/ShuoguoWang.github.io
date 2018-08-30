@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    .box{
+	    	width: 400px;
+	    	height: 400px;
+	    	border:1px solid #333;
+	    	/*position: absolute;
+	    	top:0;
+	    	right:0;
+	    	bottom: 0;
+	    	left:0;
+	    	margin:auto;*/
+	    	position:absolute;
+	    	top:50%;
+	    	left:50%;
+	    	transform:translate(-50%,-50%);	    	
+	    }
+	    .main{
+	    	width: 110px;
+	    	height: 110px;
+	    	position: absolute;
+	    	top:50%;
+	    	left:50%;
+	    	transform:translate(-50%,-50%);	  
+	    }
+	    .loading{
+	    	width: 110px;
+	    	height: 110px;
+	    	position: absolute;
+	    	background: url(loading.png) no-repeat;
+	    	animation:spin 1s infinite linear;
+	    	-webkit-animation:spin 1s infinite linear;
+	    }
+	    .circle,.circle2{
+	    	width: 80px;
+	    	height: 80px;
+	    	border-radius:40px;
+	    	position: absolute;
+	    	top:15px;
+	    	left:15px;
+	    	overflow: hidden;
+	    }
+	    .circle{
+	    	opacity: 1;
+	    	background-color: #9e51b1;
+	    	animation:halfHide 2s steps(1, end) infinite;
+	    	-webkit-animation:halfHide 2s steps(1, end) infinite;
+	    }
+	    .circle2{
+	    	opacity: 0;
+	    	background-color: #cb18f8;
+	    	animation: halfShow 2s steps(1, end) infinite;
+	    	-webkit-animation:halfShow 2s steps(1, end) infinite;
+	    }
+	    .spine,.fill,.mask{
+	    	position: absolute;
+	    	width: 50%;
+	    	height: 100%;
+	    }
+	    .spine{
+	    	border-radius: 40px 0 0 40px;
+	    	background-color: #cb18f8;
+	    	transform-origin: right center;
+	    	animation: spin 1s infinite linear;
+	    	-webkit-animation:spin 1s infinite linear;
+	    	left:0;
+	    	top:0;
+	    }
+	    .fill{
+	    	border-radius: 0 40px 40px 0; 
+	    	background-color: #cb18f8;
+	    	animation:halfHide 1s steps(1, end) infinite;
+	    	-webkit-animation:halfHide 1s steps(1, end) infinite;
+	    	left:50%;
+	    	top:0;
+	    	opacity: 1;
+	    }
+	    .mask { 
+	    	border-radius: 40px 0 0 40px;
+	    	background-color: #9e51b1;
+	    	animation: halfShow 1s steps(1, end) infinite; 
+	    	-webkit-animation:halfShow 1s steps(1, end) infinite;
+	    	left: 0; 
+	    	top:0;
+	    	opacity: 0; 
+	    }
+	    .circle2 .spine,
+	    .circle2 .fill{
+	    	background-color: #9e51b1;
+	    }
+	    .circle2 .mask{
+	    	background-color: #cb18f8;
+	    }
+
+
+		@keyframes spin{
+			0%{transform:rotate(360deg);}
+			100%{transform:rotate(0deg);}
+		}
+		@-webkit-keyframes spin{
+			0%{transform:rotate(360deg);}
+			100%{transform:rotate(0deg);}
+		}
+		@keyframes halfHide{
+			0%        { opacity: 1; }
+            50%, 100% { opacity: 0; }
+		}
+		@-webkit-keyframes halfHide{
+			0%        { opacity: 1; }
+            50%, 100% { opacity: 0; }
+		}
+		@keyframes halfShow{
+			0%{opacity: 0;}
+			50%,100%{opacity: 1;}
+		}
+		@-webkit-keyframes halfShow{
+			0%{opacity: 0;}
+			50%,100%{opacity: 1;}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	    <div class="main">
+	    	<div class="loading"></div>
+	    	<div class="circle">
+	    	    <div class="spine"></div>
+	    	    <div class="fill"></div>
+	    	    <div class="mask"></div>
+	    	</div>
+	    	<div class="circle2">
+	    	    <div class="spine"></div>
+	    	    <div class="fill"></div>
+	    	    <div class="mask"></div>
+	    	</div>
+	    </div>
+	    
+	</div>
+	
+</body>
+</html>
