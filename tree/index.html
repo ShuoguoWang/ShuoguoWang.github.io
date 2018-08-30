@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>二叉树的增加查询删除</title>
+	<style>
+		.c1,.c2,.c3,.c4{
+			display: flex;
+			flex: 1 0 0;/*flex-grow、flex-shrink、flex-basis*/
+			padding: 10px;
+			margin: 2px;
+			border: 1px solid #000;
+			background-color: #fff;
+		}
+		.c1{
+			width: 1000px;
+			height: 100px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="c1" id="root">0
+		<div class="c2">1
+			<div class="c3">2
+				<div class="c4">3</div>
+				<div class="c4">4</div>
+				<div class="c4">5</div>
+			</div>
+			<div class="c3">w
+				<div class="c4">e</div>
+				<div class="c4">r</div>
+			</div>
+			<div class="c3">d</div>
+		</div>
+		<div class="c2">v
+			<div class="c3">c
+				<div class="c4">c</div>
+				<div class="c4">x</div>
+			</div>
+			<div class="c3">s
+				<div class="c4">g</div>
+				<div class="c4">s</div>
+			</div>
+		</div>
+		<div class="c2">a</div></div>
+	<br>
+	<input type="button" value="前序">
+	<input type="text" id="search">
+	<input type="button" value="查询">
+	<input type="text" id="addInput">
+	<input type="button" value="添加" id="addBtn">
+	<input type="button" value="删除" id="delBtn">
+	<script  type="text/javascript" src="js.js"></script>
+</body>
+</html>
+
