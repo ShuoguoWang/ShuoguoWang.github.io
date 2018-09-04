@@ -250,12 +250,96 @@ var eData = {
 		  title: "css3字体流光",
 		  landscape : false,
 		  platform: "PC",
-		  sort: "专题案例",
+		  sort: "交互效果",
 		  cover: "imgs/zt/pc/pc4.jpg",
 		  demourl: "https://shuoguowang.github.io/blur/index.html",
 		  keywords: "CSS3字体流光",
 		  desc: {
 		    intro: "CSS3字体流光",
+		    compatible: ""
+		  }
+		},
+		{
+		  id: "19",
+		  title: "loading页面动画",
+		  landscape : false,
+		  platform: "PC",
+		  sort: "交互效果",
+		  cover: "imgs/zt/pc/pc5.jpg",
+		  demourl: "https://shuoguowang.github.io/loading/index.html",
+		  keywords: "loading页面动画",
+		  desc: {
+		    intro: "loading页面动画",
+		    compatible: ""
+		  }
+		},
+		{
+		  id: "20",
+		  title: "3D切换",
+		  landscape : false,
+		  platform: "PC",
+		  sort: "交互效果",
+		  cover: "imgs/zt/pc/pc6.jpg",
+		  demourl: "https://shuoguowang.github.io/3D/index.html",
+		  keywords: "3D切换",
+		  desc: {
+		    intro: "3D切换",
+		    compatible: ""
+		  }
+		},
+		{
+		  id: "21",
+		  title: "js模拟时钟，设置闹钟",
+		  landscape : false,
+		  platform: "PC",
+		  sort: "交互效果",
+		  cover: "imgs/zt/pc/pc7.jpg",
+		  demourl: "https://shuoguowang.github.io/lock/index.html",
+		  keywords: "js模拟时钟，设置闹钟",
+		  desc: {
+		    intro: "js模拟时钟，设置闹钟",
+		    compatible: ""
+		  }
+		},
+		{
+		  id: "22",
+		  title: "canvas绘制表盘",
+		  landscape : false,
+		  platform: "PC",
+		  sort: "交互效果",
+		  cover: "imgs/zt/pc/pc8.jpg",
+		  demourl: "https://shuoguowang.github.io/canvas/index.html",
+		  keywords: "canvas绘制表盘",
+		  desc: {
+		    intro: "canvas绘制表盘",
+		    compatible: ""
+		  }
+		},
+		{
+		  id: "22",
+		  title: "松下九点一刻美容院 遇见最美的自己",
+		  landscape : false,
+		  platform: "PC",
+		  sort: "专题案例,交互效果",
+		  cover: "imgs/zt/pc/pc9.jpg",
+		  demourl: "//www1.pconline.com.cn/zt/sh171116/songxia/index.html",
+		  keywords: "VR全景体验",
+		  desc: {
+		    intro: "VR全景体验",
+		    compatible: ""
+		  }
+		},
+		{
+		  id: "23",
+		  title: "弹幕实现",
+		  landscape : false,
+		  platform: "PC",
+		  sort: "交互效果",
+		  cover: "imgs/zt/pc/pc10.jpg",
+		  demourl: "https://shuoguowang.github.io/barrage/index.html",
+		  keywords: "弹幕轮播",
+		  desc: {
+		    intro: "弹幕轮播",
 		    compatible: ""
 		  }
 		}

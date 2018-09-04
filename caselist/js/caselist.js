@@ -1,7 +1,7 @@
 (function(){
 	var module = {
 		cPage : null,
-		pageSize : 12,
+		pageSize : 9,
 		targetData : [],
 		totalNum : null,
 		totalPage : null,
@@ -195,7 +195,7 @@
 			if(page != 1){
 				html += '<li class="btn btn-prev">prev</li>';
 			}
-			if(module.totalPage<12){
+			if(module.totalPage<9){
 				for(var i = 1,len = module.totalPage;i <= len;i++){
 				    if(i == page){
 				    	html += '<li class="item current">' + i + '</li>';

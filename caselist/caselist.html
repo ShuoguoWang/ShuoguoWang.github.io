@@ -27,11 +27,6 @@
 <main class="doc">
 	<!-- 侧栏导航  S -->
 	<nav class="side-nav" id="J-side-nav">
-		<div class="icon-logo">
-			<!-- <a href="index.html">
-			<img src="imgs/icon-logo-list.png" alt="" width="141" height="96" />
-			</a> -->
-		</div>
 		<ul class="nav-wrap">
 			<li class="item">
 				<a href="caselist.html?sort=0&tagid=0">
@@ -54,21 +49,6 @@
 				</a>
 			</li>
 		</ul>
-		<!-- <div class="form-search" style="display:none;">
-			<div class="icon-search"></div>
-			<input type="text" class="search-box">
-			<div class="icon-arrow-b" id="J-sort-sel-btn"></div>
-			<div class="sort-selected" id="J-sort-selected"></div>
-			<div class="sort-list" id="J-sort-list">
-				<span class="icon-arrow-t"></span>
-				<ul>
-					<li data-val="">全部</li>
-					<li data-val="0">专题</li>
-					<li data-val="1">交互</li>
-					<li data-val="2">游戏</li>
-				</ul>
-			</div>
-		</div> -->
 	</nav>
 	<!-- 侧栏导航  E -->
 	<!-- 内容区域  S -->
@@ -95,6 +75,18 @@
 <script src="js/effectData.js" type="text/javascript"></script>
 <script src="js/comm.js" type="text/javascript"></script>
 <script src="js/caselist.js" type="text/javascript"></script>
+<script>
+	window.onload=function(){
+		var url = window.location.href;
+		if(url.indexOf("?sort") < 0 ) { //判断url地址中是否包含link字符串
+			window.location.href=url+'?sort=0&tagid=0';
+		}
+	};
+    $('.side-nav .nav-wrap li a').click(function(){
+    	var url = window.location.href;
+    	window.location.href=url;
+    });
+</script>
 </body>
 </html>
 
